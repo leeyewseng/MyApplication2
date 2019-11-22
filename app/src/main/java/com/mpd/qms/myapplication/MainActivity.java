@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //create first three viewpager by delay 220millisecond . due to webview required 2ms to read the html.
+        //create first three viewpager by delay 1000millisecond . due to webview required 2ms to read the html.
         int delayTime=1000;
 
         for(int i=0;i<3;i++){
