@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Generate Random Alphabet</title>
+    <style>
+    .center{
+    position:absolute;
+    left:50%;
+    top:50%;
+
+}
+   </style>
+
+    <script>
+function runfunction(){
+passTextColour();
+passBackground();
+getRandomAlphabet();
+var result = document.getElementById("text").innerHTML;
+console.log(result);
+}
+function passTextColour()
+{
+        document.getElementById("text").style.color=getRandomColorHex();
+}
+function passBackground()
+{
+           document.body.style.background = getRandomColorHex();
+
+}
+
+function getRandomAlphabet() {
+     var alphabet  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+     document.getElementById("text").innerHTML = alphabet.substr( Math.floor(Math.random() * 24), 1);
+}
+
+function getRandomColorHex() {
+    const colorLetters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += colorLetters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+}
+</script>
+</head>
+
+<body>
+
+<h1 class="center" id="text">
+
+</h1>
+</body>
+</html>
